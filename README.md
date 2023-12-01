@@ -82,7 +82,7 @@ Note that `ipfs://bafyaabakaieac/` is a IPFS URL representing an empty directory
 
 You can upload several files to IPFS by using PUT messages with a [FormData](https://developer.mozilla.org/en-US/docs/Web/API/FormData) body.
 
-You can [append](https://developer.mozilla.org/en-US/docs/Web/API/FormData) to a FormData with `formData.append(fieldname, content, 'filename.txt')` where `fieldname` gets ignored (use something like `file`?), the `content` can either be a String, Blob, or some sort of stream.
+You can [append](https://developer.mozilla.org/en-US/docs/Web/API/FormData) to a FormData with `formData.append(fieldname, content, 'filename.txt')` where `fieldname` should be `file`, the `content` can either be a String, Blob, or some sort of stream.
 The `filename` will be the filename inside the IPFS directory that gets created.
 
 The response will contain a `Location` header with the created URL.
